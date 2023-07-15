@@ -1,18 +1,18 @@
 package pacho.h.cooker;
 
 public class CookerRunner {
-    MicrowaveOven cooker;
-//    AirFryer cooker;
+    CookerFunction cooker;
+    int timer;
 
-    public CookerRunner(MicrowaveOven cooker) {
-//    public CookerRunner(AirFryer cooker) {
+    public CookerRunner(CookerFunction cooker, int timer) {
         this.cooker = cooker;
+        this.timer = timer;
     }
 
     public void run() {
         System.out.println("Run " + cooker);
 
-        cooker.setTimer(60);
+        cooker.setTimer(timer);
         cooker.run();
     }
 }

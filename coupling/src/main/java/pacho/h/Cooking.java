@@ -10,9 +10,10 @@ public class Cooking {
 
         var microwaveOven = new MicrowaveOven();
         var airFryer = new AirFryer();
-        var cookerRunner = new CookerRunner(microwaveOven);
-//        var cookerRunner = new CookerRunner(airFryer);
+        var microwaveOvenRunner = new CookerRunner(microwaveOven, 60);
+        var airFryerRunner = new CookerRunner(airFryer, 120);
 
-        cookerRunner.run();
+        microwaveOvenRunner.run();
+        airFryerRunner.run();
     }
 }
